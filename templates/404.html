@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Errr}}</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+
+        p {
+            color: #0343cc;
+            font-size: 24px;
+        }
+
+        h1 {
+            color: #ff0000;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(65, 33, 33, 0.3);
+        }
+
+     
+       
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+            text-decoration: none; 
+            display: inline-block; 
+        }
+        
+
+     
+    </style>
+</head>
+<body>
+    <p>{{.Errr}}</p>
+    <h1>{{.Kalma}}</h1>
+    <a href="/" class="btn" >Cliquez-moi !</a>
+</body>
+</html>

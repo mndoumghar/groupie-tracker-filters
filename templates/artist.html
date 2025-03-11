@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Artist.Name}} - Artist Details</title>
+    <link rel="stylesheet" href="../static/profile.css">
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="artistname">
+            <img src="{{.Artist.Image}}" alt="Artist Image">
+            <h1>{{.Artist.Name}}</h1>
+        </div>
+
+        <div class="nembres">
+            <h2>First Album</h2>
+            <p>{{.Artist.FirstAlbum}}</p>
+
+            <h2>Members</h2>
+            <ul>
+                {{range .Artist.Members}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+        </div>
+
+        <div class="location">
+            <h2>Locations</h2>
+            <ul>
+                {{range .Locations.Locations}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+        </div>
+
+        <div class="Dates">
+            <h2>Dates</h2>
+            <ul>
+                {{range .Dates.Dates}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+        </div>
+
+        <!-- Relations Section -->
+        <div class="relation">
+            <h2>Relations</h2>
+            <ul>
+                {{range $date, $locations := .Relation.DatesLocations}}
+                <li>
+                    <strong>{{$date}}</strong>
+                    <ul>
+                        {{range $locations}}
+                        <li>{{.}}</li>
+                        {{end}}
+                    </ul>
+                </li>
+                {{end}}
+            </ul>
+        </div>
+
+        <a href="/">Back to Home</a>
+    </div>
+
+</body>
+
+</html>
